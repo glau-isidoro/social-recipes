@@ -1,12 +1,14 @@
 <h2>Nova Receita</h2>
 <%= simple_form_for @recipe do |f| %>
   <%= f.input :name, label: 'Nome da receita' %>
-  <%= f.input :cuisine, label: 'Cozinha' %>
-  <%= f.input :food_type, label: 'Tipo de comida' %>
+  <%= f.association :cuisine, label: 'Cozinha' %>
+  <%= f.association :food_type, label: 'Tipo de comida' %>
   <%= f.input :people, label: 'Quantas pessoas serve' %>
   <%= f.input :preparation_time, label: 'Tempo de preparo' %>
-  <%= f.input :dificulty, label: 'Dificuldade' %>
+  <%= f.input :dificulty,
+    collection: @dificulty,
+    label: 'Dificuldade' %>
   <%= f.input :ingredients, as: :text, label: 'Ingredientes' %>
   <%= f.input :steps, as: :text, label: 'Passo a passo' %>
-  <%= f.button :submit, 'Cadastrar Receita' %>
+  <%= f.button :submit, 'Cadastrar' %>
 <% end  %>

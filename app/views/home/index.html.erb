@@ -1,10 +1,12 @@
 <h2>Receitas</h2>
 <% @recipes.each do |recipe| %>
-  <%= link_to recipe do %>
-    <div class="col-md-6 jumbotron">
-      <p><strong><%= recipe.name %></strong></p>
-      <p>Tipo de comida: <%= recipe.food_type %></p>
-      <p>Dificuldade: <%= recipe.dificulty %></p>
-    </div>
-  <% end %>
+  <div class="col-md-5">
+    <%= link_to recipe do %>
+      <div class="col-md-12 jumbotron">
+        <p><strong><%= recipe.name %></strong></p>
+        <p>Tipo de comida: <%= recipe.food_type.name %></p>
+        <p>Dificuldade: <%= recipe.dificulty %></p>
+      </div>
+    <% end %>
+  </div>
 <% end %>

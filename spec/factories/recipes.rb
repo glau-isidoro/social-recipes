@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :recipe do
     name "Crumble de maçã"
-    cuisine "Brasileira"
-    food_type "Sobremesa"
+    food_type
+    cuisine
     people 6
     preparation_time 50
     dificulty "Fácil"

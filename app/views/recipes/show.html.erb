@@ -1,8 +1,8 @@
 <div class="row">
   <h2><%= @recipe.name %></h2></br>
   <div class='col-md-6'>
-    <p> <strong>Cozinha: </strong> <%= @recipe.cuisine %></p>
-    <p> <strong>Tipo: </strong> <%= @recipe.food_type %></p>
+    <p> <strong>Cozinha: </strong> <%= @recipe.cuisine.name %></p>
+    <p> <strong>Tipo: </strong> <%= @recipe.food_type.name %></p>
     <p> <strong>Serve: </strong> <%= @recipe.people %> pessoas</p>
     <p> <strong>Tempo de preparo: </strong>
     <%= @recipe.preparation_time %> minutos</p>
